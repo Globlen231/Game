@@ -23,19 +23,23 @@ public class JavaApplication29 {
         Scanner scanner = new Scanner (System.in);
         int number = random.nextInt(10);
         System.out.println("программа задумала число от 0 до 9 отгадай!");
-        for(int i=0; i<5; i++){
-             int userNumber = scanner.nextInt();
-             if(userNumber == number){
-                      System.out.println("Ты выйграл!!");
-                      break;
-                 }else{
-                     if (attemp<4){
-                          System.out.println("Ты не угадал!");
-                     }else{   
-                          System.out.println("Число было"+ number);
-
+  //      for(int i=0; i<5; i++){
+        int i=0;
+        do{
+            int userNumber = scanner.nextInt();
+            if(userNumber == number){
+                System.out.println("Ты выйграл!!");
+                break;
+            }else{
+                 if (i<attemp){
+                      System.out.println("Ты не угадал!");
+                 }else{   
+                      System.out.println("Число было"+ number);
                  }
-      }
-      }
- }   
+            }  
+            i++;
+        }while(true); 
+    }
 }
+   
+        
